@@ -42,12 +42,12 @@ code {
 
 :root{
     /* ===== Colors ===== */
-    --body-color: #040d19;
-    --sidebar-color: #000;
+    --body-color: #d0d0d0;
+    --sidebar-color: #fff;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
-    --text-color: #707070;
+    --text-color: #222222de;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -119,7 +119,7 @@ body.dark{
 
 .sidebar .text,
 .sidebar .icon{
-    color: var(--text-color);
+    color: #353535de;
     transition: var(--tran-03);
 }
 
@@ -340,17 +340,57 @@ body.dark .switch::before{
 }
 body.dark .home .text{color: var(--text-color);}
 .ugauge_main_card{padding: 15px;}
-.ugauge_card{background: #242526!important;color: #fff;height: 100px;}
+.ugauge_card{background: #fff!important;color: #242526;height: 100px;}
 .ugauge_row{width: 100%;}
 .ugauge_col_size_25{width: 25%;float: left;}
 .ugauge_col_size_50{width: 50%;float: left;}
 .ugauge_col_size_20{width: 20%;float: left;}
 .ugauge_col_size_33{width: 33%;float: left;}
-.border_r_10_theme_clr{border-right: 10px solid #18191a;}
+.border_r_10_theme_clr{border-right: 10px solid #d0d0d0;}
 /* .p-datatable .p-datatable-header{text-align: left;} */
 .text-left{text-align: left;}
 
-
-
+.card_Pro{
+    background: white;
+    margin: 10px;
+    padding: 25px;
+}
+.card h5{color:red;}
+.p_t_100{
+    padding-top: 100px;
+}
+.text_right{text-align: right;}
 
 .p_all_20{padding: 20px;}
+.p-datatable .p-datatable-header {
+    background: #ffffff!important;
+    color: rgb(0 0 0 / 60%)!important;
+    /* border: none;
+    border-bottom: 1px solid #ffffff!important; */
+}
+.p-datatable .p-datatable-thead > tr > th {
+    /* border: 1px solid #0b213f!important; */
+    color: rgb(0 0 0 / 87%)!important;
+    background: #ffffff!important;
+    border: none;
+    border-bottom: 1px solid #0b213f!important;
+}
+.p-datatable .p-datatable-tbody > tr {
+    color: rgb(0 0 0 / 87%)!important;
+    background: #ffffff!important;
+    border: none;
+    border-bottom: 1px solid #0b213f!important;
+}
+.p-datatable .p-datatable-tbody > tr > td {
+    border-bottom: 1px solid #0b213f!important; 
+}
+.p-paginator {
+    color: rgb(0 0 0 / 87%)!important;
+    background: #ffffff!important;
+    border: solid #0b213f;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #1c2127!important;
+    border-color: rgb(62 66 86 / 16%)!important;
+    color: rgba(255, 255, 255, 0.87)!important;
+}

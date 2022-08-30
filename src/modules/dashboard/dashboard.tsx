@@ -13,14 +13,14 @@ class Dashboard extends React.Component<DashboardProps, DashboardState>{
     // class Dashboard extends React.Component<DashboardProps, DashboardState>{
 
 
-        basicData:any;
-        multiAxisData:any;
-        lineStylesData:any;
-        options:any;
+    basicData: any;
+    multiAxisData: any;
+    lineStylesData: any;
+    options: any;
 
 
 
-    constructor(props:any) {
+    constructor(props: any) {
         super(props);
 
         this.basicData = {
@@ -343,7 +343,7 @@ class Dashboard extends React.Component<DashboardProps, DashboardState>{
                             <div className="ugauge_card border_r_10_theme_clr ">
                                 <div className="ugauge_row">
                                     <div className="ugauge_col_size_50">
-                                    <i className="pi pi-users"></i>
+                                        <i className="pi pi-users"></i>
                                     </div>
                                     <div className="ugauge_col_size_50">
                                         <h2>Customer</h2>
@@ -353,10 +353,10 @@ class Dashboard extends React.Component<DashboardProps, DashboardState>{
                             </div>
                         </div>
                         <div className="ugauge_col_size_25 ">
-                        <div className="ugauge_card border_r_10_theme_clr">
+                            <div className="ugauge_card border_r_10_theme_clr">
                                 <div className="ugauge_row">
                                     <div className="ugauge_col_size_50">
-                                    <i className="pi pi-users"></i>
+                                        <i className="pi pi-users"></i>
                                     </div>
                                     <div className="ugauge_col_size_50">
                                         <h2>Users</h2>
@@ -366,10 +366,10 @@ class Dashboard extends React.Component<DashboardProps, DashboardState>{
                             </div>
                         </div>
                         <div className="ugauge_col_size_25">
-                        <div className="ugauge_card border_r_10_theme_clr">
+                            <div className="ugauge_card border_r_10_theme_clr">
                                 <div className="ugauge_row">
                                     <div className="ugauge_col_size_50">
-                                    <i className="pi pi-users"></i>
+                                        <i className="pi pi-users"></i>
                                     </div>
                                     <div className="ugauge_col_size_50">
                                         <h2>Rating</h2>
@@ -379,10 +379,10 @@ class Dashboard extends React.Component<DashboardProps, DashboardState>{
                             </div>
                         </div>
                         <div className="ugauge_col_size_25">
-                        <div className="ugauge_card border_r_10_theme_clr">
+                            <div className="ugauge_card border_r_10_theme_clr">
                                 <div className="ugauge_row">
                                     <div className="ugauge_col_size_50">
-                                    <i className="pi pi-users"></i>
+                                        <i className="pi pi-users"></i>
                                     </div>
                                     <div className="ugauge_col_size_50">
                                         <h2>Users</h2>
@@ -396,22 +396,28 @@ class Dashboard extends React.Component<DashboardProps, DashboardState>{
 
 
 
-                    <div>
-                <div className="ugauge_row card">
-                    <h5>Basic</h5>
-                    <Chart type="line" data={this.basicData} options={basicOptions} />
-                </div>
+                    <div className='p_t_100'>
+                        <div className="ugauge_row card ">
+                            <div className='card_Pro'>
+                                <h5>Basic</h5>
+                                <Chart type="line" data={this.basicData} options={basicOptions} />
+                            </div>
+                        </div>
 
-                <div className="card">
-                    <h5>Multi Axis</h5>
-                    <Chart type="line" data={this.multiAxisData} options={multiAxisOptions} />
-                </div>
+                        <div className="card ">
+                            <div className='card_Pro'>
+                                <h5>Multi Axis</h5>
+                                <Chart type="line" data={this.multiAxisData} options={multiAxisOptions} />
+                            </div>
+                        </div>
 
-                <div className="card">
-                    <h5>Line Styles</h5>
-                    <Chart type="line" data={this.lineStylesData} options={basicOptions} />
-                </div>
-            </div>
+                        <div className="card ">
+                            <div className='card_Pro'>
+                                <h5>Line Styles</h5>
+                                <Chart type="line" data={this.lineStylesData} options={basicOptions} />
+                            </div>
+                        </div>
+                    </div>
 
 
                     {/* </div> */}

@@ -27,6 +27,7 @@ class ProjectDetailComponent extends React.Component<projectDetailsProps, any> {
         this.openNew = this.openNew.bind(this);
         this.onInputChange = this.onInputChange.bind(this);
         this.onInputNumberChange = this.onInputNumberChange.bind(this);
+        this.hideDialog = this.hideDialog.bind(this);
     }
     onInputChange(e: any, name: any) {
         const val = (e.target && e.target.value) || '';
@@ -51,18 +52,19 @@ class ProjectDetailComponent extends React.Component<projectDetailsProps, any> {
             submitted: false,
             projectDialog: true
         });
-    } hideDialog() {
-        this.setState({
-            submitted: false,
-            projectDialog: false
-        });
+    }
+     hideDialog() {
+        // this.setState({
+        //     projectDialog: false
+        // });
     }
      projectDialogFooter = (
         <React.Fragment>
-            <Button label="Cancel" icon="pi pi-times" className="p-button-text" onClick={this.hideDialog} />
+            <Button label="Cancel" icon="pi pi-times" className="p-button-text" onClick={()=>this.setState({projectDialog:false})} />
             <Button label="Save" icon="pi pi-check" className="p-button-text" onClick={
                 ()=>{
                     alert('Project Name: '+this.state.project.projectName+'Project Decrition: '+this.state.project.description+'Project Price: '+this.state.project.price)
+                console.log('Project Details ======>',this.state.project);
                 }
             } />
         </React.Fragment>
@@ -75,8 +77,14 @@ class ProjectDetailComponent extends React.Component<projectDetailsProps, any> {
         const projectComponentData = this.props.projectList;
         const header = (
             <div className="table-header">
+                <div className=''>
                 <h3 className='card_tittle ugauge_col_size_50 text-left'>Project Details</h3>
+                </div>
+                <div className='text_right'>
                 <Button icon="pi pi-plus" onClick={this.openNew} />
+                </div>
+                
+              
             </div>
         );
         return (
